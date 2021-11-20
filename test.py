@@ -8,6 +8,8 @@ def FileToArray():
     codeArray = []
     for i in fileInput:
         length = len(i)
+        if (length == 1) & (i[0] == '\n'):
+            continue
         if i[0] == ' ':
             startIndent = True
         else:
