@@ -11,7 +11,7 @@ OP -> + | - | * | / | %;
 VAL -> number | ( VV ) | VV OP VV | VV * * VV | VV / / VV | BOOLEAN | STRING;
 TYPE -> int | str | float | double;
 INPUT -> input CBRACKET | TYPE ( INPUT );
-COMPARE ->	= = | ! = | > = | < = | > | < | is;
+COMPARE -> = = | ! = | > = | < = | > | < | is;
 BOOLEAN -> true | false | VV COMPARE VV | BOOLEAN and BOOLEAN | BOOLEAN or BOOLEAN | not BOOLEAN;
 EXPRESSION -> ( BOOLEAN ) : S | BOOLEAN : S;
 IF -> if EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE;

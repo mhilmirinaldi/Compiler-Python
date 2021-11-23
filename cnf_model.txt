@@ -1,0 +1,130 @@
+S -> S S | VAR A1 | VAR B1 | VAR C1 | VAR D1 | VAR E1 | H3 D11 | H3 VAR | F3 E11 | F3 F11 | L3 B11 | J3 C11 | I3 CBRACKET | O3 EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE | D3 EXPRESSION | C3 G11 | C3 H11 | Y2 I11 | DEF RETURN | X2 J11
+Z3 -> =
+A1 -> Z3 VV
+B1 -> OP B2
+B2 -> Z3 VV
+C1 -> OP C2
+C2 -> Z3 VV
+D1 -> OP D2
+D2 -> Z3 VV
+E1 -> OP E2
+E2 -> Z3 VV
+VV -> VV F1 | VV G1 | none | variable | number | X3 I1 | VV J1 | VV K1 | VV L1 | U3 CBRACKET | TYPE M1 | W2 CBRACKET | U2 K11 | true | false | VV N1 | BOOLEAN O1 | BOOLEAN P1 | Q3 BOOLEAN | L3 T1 | J3 U1 | L3 W1 | J3 X1 | STRING Y1 | STRING Z1 | STRING A11
+F1 -> OP VV
+Y3 -> ,
+G1 -> Y3 VV
+VAR -> variable
+X3 -> (
+W3 -> )
+CBRACKET -> X3 H1 | X3 W3
+H1 -> VV W3
+OP -> + | - | * | / | %
+VAL -> number | X3 I1 | VV J1 | VV K1 | VV L1 | true | false | VV N1 | BOOLEAN O1 | BOOLEAN P1 | Q3 BOOLEAN | L3 T1 | J3 U1 | L3 W1 | J3 X1 | STRING Y1 | STRING Z1 | STRING A11
+I1 -> VV W3
+J1 -> OP VV
+K1 -> OP K2
+K2 -> OP VV
+L1 -> OP L2
+L2 -> OP VV
+TYPE -> int | str | float | double
+U3 -> input
+INPUT -> U3 CBRACKET | TYPE M1
+M1 -> X3 M2
+M2 -> INPUT W3
+COMPARE -> Z3 Z3 | T3 Z3 | COMPARE Z3 | COMPARE Z3 | > | < | is
+T3 -> !
+BOOLEAN -> true | false | VV N1 | BOOLEAN O1 | BOOLEAN P1 | Q3 BOOLEAN
+N1 -> COMPARE VV
+S3 -> and
+O1 -> S3 BOOLEAN
+R3 -> or
+P1 -> R3 BOOLEAN
+Q3 -> not | P3 S
+P3 -> :
+EXPRESSION -> X3 Q1 | BOOLEAN R1
+Q1 -> BOOLEAN Q2
+Q2 -> W3 Q3
+R1 -> P3 S
+O3 -> if
+IF -> O3 EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE
+N3 -> elif
+ELIF -> N3 EXPRESSION | ELIF ELIF | ELIF ELSE
+M3 -> else
+ELSE -> M3 S1
+S1 -> P3 S
+TEXT -> TEXT TEXT | variable
+L3 -> "
+K3 -> string
+STRING -> L3 T1 | J3 U1 | L3 W1 | J3 X1 | STRING Y1 | STRING Z1 | STRING A11
+T1 -> K3 L3
+J3 -> '
+U1 -> K3 J3
+W1 -> TEXT L3
+X1 -> TEXT J3
+Y1 -> OP STRING
+Z1 -> OP VAL
+A11 -> OP A12
+A12 -> X3 A13
+A13 -> VAL W3
+COMMENT -> L3 B11 | J3 C11
+B11 -> L3 B12
+B12 -> L3 B13
+B13 -> TEXT B14
+B14 -> L3 B15
+B15 -> L3 L3
+C11 -> J3 C12
+C12 -> J3 C13
+C13 -> TEXT C14
+C14 -> J3 C15
+C15 -> J3 J3
+I3 -> print
+PRINT -> I3 CBRACKET
+H3 -> import
+G3 -> as
+IMPORT -> H3 D11 | H3 VAR | F3 E11 | F3 F11
+D11 -> VAR D12
+D12 -> G3 VAR
+F3 -> from
+E11 -> VAR E12
+E12 -> H3 VAR
+F11 -> VAR F12
+F12 -> H3 F13
+F13 -> VAR F14
+F14 -> G3 VAR
+E3 -> raise
+RAISE -> E3 CBRACKET
+LOOPEND -> continue | break | pass
+D3 -> while
+WHILE -> D3 EXPRESSION
+C3 -> for
+B3 -> in
+FOR -> C3 G11 | C3 H11
+G11 -> VAR G12
+G12 -> B3 G13
+G13 -> STRING G14
+G14 -> P3 S
+A3 -> range
+H11 -> VAR H12
+H12 -> B3 H13
+H13 -> A3 H14
+H14 -> CBRACKET H15
+H15 -> P3 S
+Z2 -> return
+RETURN -> Z2 BOOLEAN | Z2 VAL
+Y2 -> def
+DEF -> Y2 I11 | DEF RETURN
+I11 -> VAR I12
+I12 -> CBRACKET I13
+I13 -> P3 S
+X2 -> class
+CLASS -> X2 J11
+J11 -> VAR J12
+J12 -> P3 S
+W2 -> len
+METHOD -> W2 CBRACKET | U2 K11
+U2 -> with
+T2 -> open
+K11 -> T2 K12
+K12 -> CBRACKET K13
+K13 -> G3 VAR
+S0 -> S S | VAR A1 | VAR B1 | VAR C1 | VAR D1 | VAR E1 | H3 D11 | H3 VAR | F3 E11 | F3 F11 | L3 B11 | J3 C11 | I3 CBRACKET | O3 EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE | D3 EXPRESSION | C3 G11 | C3 H11 | Y2 I11 | DEF RETURN | X2 J11
