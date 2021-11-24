@@ -1,35 +1,35 @@
 S -> S S | VAR A1 | VAR B1 | VAR C1 | VAR D1 | VAR E1 | VAR F1 | VAR CBRACKET | VAR G1 | L3 N11 | L3 VAR | J3 O11 | J3 P11 | P3 I11 | N3 J11 | M3 CBRACKET | M3 K11 | M3 L11 | M3 M11 | S3 EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE | H3 EXPRESSION | G3 Q11 | G3 R11 | G3 S11 | D3 T11 | D3 U11 | DEF RETURN | D3 W11 | C3 X11
 Z3 -> =
-A1 -> Z3 VV
+A1 -> Z3 V
 B1 -> Z3 BOOLEAN
 C1 -> OP C2
-C2 -> Z3 VV
+C2 -> Z3 V
 D1 -> OP D2
-D2 -> Z3 VV
+D2 -> Z3 V
 E1 -> OP E2
-E2 -> Z3 VV
+E2 -> Z3 V
 F1 -> OP F2
-F2 -> Z3 VV
+F2 -> Z3 V
 Y3 -> (
 X3 -> )
 G1 -> Y3 G2
 G2 -> VAL X3
-VV -> VV H1 | VV I1 | none | variable | number | Y3 L1 | VV M1 | VV N1 | VV O1 | VAL P1 | U3 CBRACKET | TYPE Q1 | B3 CBRACKET | A3 Y11 | true | false | VV R1 | BOOLEAN S1 | TEXT BOOLEAN | variable | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3
-H1 -> OP VV
+V -> V H1 | V I1 | none | variable | number | Y3 L1 | V M1 | V N1 | V O1 | VAL P1 | U3 CBRACKET | TYPE Q1 | B3 CBRACKET | A3 Y11 | true | false | V R1 | BOOLEAN S1 | TEXT BOOLEAN | variable | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3
+H1 -> OP V
 W3 -> , | TEXT RETURN
-I1 -> W3 VV
+I1 -> W3 V
 VAR -> variable
 CBRACKET -> Y3 J1 | Y3 X3 | Y3 K1
 J1 -> VAL X3
 K1 -> VAR X3
 OP -> + | - | * | / | %
-VAL -> number | Y3 L1 | VV M1 | VV N1 | VV O1 | VAL P1 | true | false | VV R1 | BOOLEAN S1 | TEXT BOOLEAN | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3 | variable
-L1 -> VV X3
-M1 -> OP VV
+VAL -> number | Y3 L1 | V M1 | V N1 | V O1 | VAL P1 | true | false | V R1 | BOOLEAN S1 | TEXT BOOLEAN | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3 | variable
+L1 -> V X3
+M1 -> OP V
 N1 -> OP N2
-N2 -> OP VV
+N2 -> OP V
 O1 -> OP O2
-O2 -> OP VV
+O2 -> OP V
 P1 -> W3 VAL
 TYPE -> int | str | float | double
 U3 -> input
@@ -39,8 +39,8 @@ Q2 -> INPUT X3
 COMPARE -> Z3 Z3 | T3 Z3 | COMPARE Z3 | COMPARE Z3 | > | < | is
 T3 -> ! | TEXT S
 COMPAREB -> and | or
-BOOLEAN -> true | false | VV R1 | BOOLEAN S1 | TEXT BOOLEAN | variable
-R1 -> COMPARE VV
+BOOLEAN -> true | false | V R1 | BOOLEAN S1 | TEXT BOOLEAN | variable
+R1 -> COMPARE V
 S1 -> COMPAREB BOOLEAN
 EXPRESSION -> Y3 T1 | BOOLEAN U1 | Y3 W1 | BOOLEAN X1
 T1 -> BOOLEAN T2
@@ -127,7 +127,7 @@ S11 -> VAR S12
 S12 -> F3 S13
 S13 -> VAR S14
 S14 -> TEXT S
-RETURN -> RETURN BOOLEAN | RETURN VV | return | RETURN STRING
+RETURN -> RETURN BOOLEAN | RETURN V | return | RETURN STRING
 D3 -> def
 DEF -> D3 T11 | D3 U11 | DEF RETURN | D3 W11
 T11 -> VAR T12
