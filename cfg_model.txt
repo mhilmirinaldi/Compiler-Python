@@ -1,7 +1,7 @@
 Terminals:
 + - * / % ! = > < ( ) ' " : , if elif else and or def return while for in range break pass continue variable string number true false class is none not print input str float int double import as from with open raise len
 Variables:
-S VV VAR VAL COMMENT TEXT BOOLEAN OP STRING IF ELIF ELSE LOOPEND PRINT EXPRESSION WHILE FOR DEF COMPARE COMPAREB INPUT CBRACKET TYPE CLASS IMPORT RETURN RAISE METHOD
+S VV VAR VAL CBRACKET OP VAL TYPE INPUT COMPARE COMPAREB BOOLEAN EXPRESSION IF ELIF ELSE TEXT STRING COMMENT PRINT IMPORT RAISE LOOPEND WHILE FOR RETURN DEF CLASS METHOD
 Productions:
 S -> S S | VAR = VV | VAR = BOOLEAN | VAR + = VV | VAR - = VV | VAR * = VV | VAR / = VV | IMPORT | VAR CBRACKET | COMMENT | PRINT | IF | WHILE | FOR | DEF | CLASS;
 VV ->  VAR | VAL | VV OP VV | INPUT | VV , VV | none | METHOD;

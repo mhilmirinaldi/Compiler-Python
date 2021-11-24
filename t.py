@@ -1,7 +1,7 @@
-def do_something():
-    ''' This is a sample multiline comment
+def do_something(x):
+    ''' a
     '''
-
+    a = 2
     if x == 0:
         return 0
 
