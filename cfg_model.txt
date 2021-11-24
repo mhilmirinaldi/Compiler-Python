@@ -1,19 +1,19 @@
 Terminals:
 + - * / % ! = > < ( ) ' " : , if elif else and or def return while for in range break pass continue variable string number true false class is none not print input str float int double import as from with open raise len
 Variables:
-S VV VAR VAL CBRACKET OP VAL TYPE INPUT COMPARE COMPAREB BOOLEAN EXPRESSION IF ELIF ELSE TEXT STRING COMMENT PRINT IMPORT RAISE LOOPEND WHILE FOR RETURN DEF CLASS METHOD
+S V VAR VAL CBRACKET OP VAL TYPE INPUT COMPARE COMPAREB BOOLEAN EXPRESSION IF ELIF ELSE TEXT STRING COMMENT PRINT IMPORT RAISE LOOPEND WHILE FOR RETURN DEF CLASS METHOD
 Productions:
-S -> S S | VAR = VV | VAR = BOOLEAN | VAR + = VV | VAR - = VV | VAR * = VV | VAR / = VV | IMPORT | VAR CBRACKET | VAR ( VAL ) | COMMENT | PRINT | IF | WHILE | FOR | DEF | CLASS;
-VV -> VAR | VAL | VV OP VV | INPUT | VV , VV | none | METHOD;
+S -> S S | VAR = V | VAR = BOOLEAN | VAR + = V | VAR - = V | VAR * = V | VAR / = V | IMPORT | VAR CBRACKET | VAR ( VAL ) | COMMENT | PRINT | IF | WHILE | FOR | DEF | CLASS;
+V -> VAR | VAL | V OP V | INPUT | V , V | none | METHOD;
 VAR -> variable;
 CBRACKET -> ( VAL ) | ( ) | ( VAR );
 OP -> + | - | * | / | %;
-VAL -> number | ( VV ) | VV OP VV | VV * * VV | VV / / VV | BOOLEAN | STRING | VAL , VAL;
+VAL -> number | ( V ) | V OP V | V * * V | V / / V | BOOLEAN | STRING | VAL , VAL;
 TYPE -> int | str | float | double;
 INPUT -> input CBRACKET | TYPE ( INPUT );
 COMPARE -> = = | ! = | > = | < = | > | < | is;
 COMPAREB -> and | or;
-BOOLEAN -> true | false | VAR | VV COMPARE VV | BOOLEAN COMPAREB BOOLEAN | not BOOLEAN;
+BOOLEAN -> true | false | VAR | V COMPARE V | BOOLEAN COMPAREB BOOLEAN | not BOOLEAN;
 EXPRESSION -> ( BOOLEAN ) : S | BOOLEAN : S | ( BOOLEAN ) : RETURN | BOOLEAN : RETURN;
 IF -> if EXPRESSION | IF ELIF | IF ELSE | IF LOOPEND | IF RAISE;
 ELIF -> elif EXPRESSION | ELIF ELIF | ELIF ELSE | ELIF LOOPEND;
@@ -27,7 +27,7 @@ RAISE -> raise CBRACKET;
 LOOPEND -> continue | break | pass;
 WHILE -> while EXPRESSION;
 FOR -> for VAR in STRING : S | for VAR in range ( VAL ) : S | for VAR in VAR : S;
-RETURN -> return BOOLEAN | return VV | return | return STRING;
+RETURN -> return BOOLEAN | return V | return | return STRING;
 DEF -> def VAR CBRACKET : S | def VAR ( VAL ) : S | DEF RETURN | def VAR CBRACKET : RETURN;
 CLASS -> class VAR : S;
 METHOD -> len CBRACKET | with open CBRACKET as VAR
