@@ -9,7 +9,7 @@ Anggota Kelompok :
 
 
 ## Deskripsi Program
-Program ini dibuat untuk memenuhi Tugas Besar Mata Kuliah IF2124 Teori Bahasa Formal dan Otomata tahun 2021/2022. Di dalam tugas besar ini, kami diminta untuk membuat sebuah program compiler bahasa python dengan menggunakan algoritma CYK (Cocke-Younger-Kasami) yang menerima sebuah grammar CFG yang sudah diubah ke dalam bentuk CNF 
+Program ini dibuat untuk memenuhi Tugas Besar Mata Kuliah IF2124 Teori Bahasa Formal dan Otomata tahun 2021/2022. Di dalam tugas besar ini, kami diminta untuk membuat sebuah program compiler bahasa python dengan menggunakan algoritma CYK (Cocke-Younger-Kasami) yang menerima sebuah grammar CFG yang sudah diubah ke dalam bentuk CNF.
 
 
 ## Cara Menjalankan Program
