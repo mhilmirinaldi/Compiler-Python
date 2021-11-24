@@ -6,7 +6,7 @@ Productions:
 S -> S S | VAR = VV | VAR = BOOLEAN | VAR + = VV | VAR - = VV | VAR * = VV | VAR / = VV | IMPORT | VAR CBRACKET | COMMENT | PRINT | IF | WHILE | FOR | DEF | CLASS;
 VV -> VAR | VAL | VV OP VV | INPUT | VV , VV | none | METHOD;
 VAR -> variable;
-CBRACKET -> ( VV ) | ( );
+CBRACKET -> ( VAL ) | ( ) | ( VAR );
 OP -> + | - | * | / | %;
 VAL -> number | ( VV ) | VV OP VV | VV * * VV | VV / / VV | BOOLEAN | STRING | VAL , VAL;
 TYPE -> int | str | float | double;
@@ -28,6 +28,6 @@ LOOPEND -> continue | break | pass;
 WHILE -> while EXPRESSION;
 FOR -> for VAR in STRING : S | for VAR in range ( VAL ) : S | for VAR in VAR : S;
 RETURN -> return BOOLEAN | return VV | return | return STRING;
-DEF -> def VAR CBRACKET : S | DEF RETURN | def VAR CBRACKET : RETURN;
+DEF -> def VAR CBRACKET : S | def VAR ( VAL ) : S | DEF RETURN | def VAR CBRACKET : RETURN;
 CLASS -> class VAR : S;
 METHOD -> len CBRACKET | with open CBRACKET as VAR
