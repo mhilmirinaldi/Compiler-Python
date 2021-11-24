@@ -14,7 +14,7 @@ Y3 -> (
 X3 -> ) | TEXT RETURN
 G1 -> Y3 G2
 G2 -> VAL X3
-V -> V H1 | V I1 | none | VAR J1 | variable | number | Y3 M1 | V N1 | V O1 | V P1 | VAL Q1 | U3 CBRACKET | TYPE R1 | B3 CBRACKET | A3 Y11 | true | false | V S1 | BOOLEAN T1 | TEXT BOOLEAN | VAR J1 | variable | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3
+V -> V H1 | V I1 | none | VAR J1 | variable | number | Y3 M1 | V N1 | V O1 | V P1 | VAL Q1 | U3 CBRACKET | TYPE R1 | B3 CBRACKET | A3 Y11 | True | False | V S1 | BOOLEAN T1 | TEXT BOOLEAN | VAR J1 | variable | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3
 H1 -> OP V
 W3 -> ,
 I1 -> W3 V
@@ -24,7 +24,7 @@ CBRACKET -> Y3 K1 | Y3 X3 | Y3 L1
 K1 -> VAL X3
 L1 -> VAR X3
 OP -> + | - | * | / | %
-VAL -> number | Y3 M1 | V N1 | V O1 | V P1 | VAL Q1 | true | false | V S1 | BOOLEAN T1 | TEXT BOOLEAN | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3 | VAR J1 | variable
+VAL -> number | Y3 M1 | V N1 | V O1 | V P1 | VAL Q1 | True | False | V S1 | BOOLEAN T1 | TEXT BOOLEAN | P3 B11 | N3 C11 | P3 D11 | N3 E11 | STRING F11 | STRING G11 | STRING H11 | N3 N3 | P3 P3 | VAR J1 | variable
 M1 -> V X3
 N1 -> OP V
 O1 -> OP O2
@@ -40,7 +40,7 @@ R2 -> INPUT X3
 COMPARE -> Z3 Z3 | T3 Z3 | COMPARE Z3 | COMPARE Z3 | > | < | is
 T3 -> !
 COMPAREB -> and | or
-BOOLEAN -> true | false | V S1 | BOOLEAN T1 | TEXT BOOLEAN | VAR J1 | variable
+BOOLEAN -> True | False | V S1 | BOOLEAN T1 | TEXT BOOLEAN | VAR J1 | variable
 S1 -> COMPARE V
 T1 -> COMPAREB BOOLEAN
 EXPRESSION -> Y3 U1 | BOOLEAN W1 | Y3 X1 | BOOLEAN Y1
