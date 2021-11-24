@@ -1,4 +1,4 @@
-def do_something(x):
+def do_something():
     ''' a
     '''
     a = 2

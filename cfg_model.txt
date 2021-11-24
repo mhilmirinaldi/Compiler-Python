@@ -26,7 +26,7 @@ IMPORT -> import VAR as VAR | import VAR | from VAR import VAR | from VAR import
 RAISE -> raise CBRACKET;
 LOOPEND -> continue | break | pass;
 WHILE -> while EXPRESSION;
-FOR -> for VAR in STRING : S | for VAR in range ( VAL ) : S | for VAR in VAR : S | for VAR in range ( VAR ) : S;
+FOR -> for VAR in STRING : S | for VAR in range ( VAL ) : S | for VAR in VAR : S;
 RETURN -> return BOOLEAN | return VV | return | return STRING;
 DEF -> def VAR CBRACKET : S | DEF RETURN;
 CLASS -> class VAR : S;
